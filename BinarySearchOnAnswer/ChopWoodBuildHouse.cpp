@@ -19,7 +19,7 @@ void solve() {
         int temp; cin >> temp;
         h.push_back(temp);
     }
-    ll left = 0, right = 1e9;
+    ll left = 0, right = *max_element(h.begin(), h.end());
     ll ans = -1;
     while(left <= right) {
         ll mid = (left + right)/2;
