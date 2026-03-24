@@ -7,6 +7,8 @@ bool check(vector<int> &k, int n, int t, ll time) {
     ll dem = 0;
     for(int i = 0; i < n; i++) {
         dem += time / k[i];
+        // Có thể tràn long long
+        if(dem >= t) return true;
     }
     return dem >= t;
 }
@@ -19,7 +21,7 @@ void solve() {
         
         k.push_back(x);
     }
-    ll r = 1ll * (*min_element(k.begin(),k.end())) * t, l = (*min_element(k.begin(),k.end())) - 1;
+    ll r = 2e9+7, l = 0;
     ll ans = -1;
     while(l <= r) {
         ll mid = (l+r)/2;
