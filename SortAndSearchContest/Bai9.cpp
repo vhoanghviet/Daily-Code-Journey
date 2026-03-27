@@ -2,44 +2,52 @@
 using ll = long long;
 using namespace std;
 
-
 // Extra essential function here
 
-void solve() 
+void solve()
 {
     // Solution here
     int n;
     cin >> n;
     vector<int> a(n);
-    for(int i = 0; i < n; i++)  cin >> a[i];
+    for (int i = 0; i < n; i++)
+        cin >> a[i];
     int nq;
     cin >> nq;
-    vector<int> q(nq);
-    int temp;
-    for(int i = 0; i < nq; i++) {
-        cin >> q[i];
-    }
-    for(int i : q) {
-        int left = 0 , right = n-1;
+
+    for (int i = 0; i < nq; i++)
+    {
+        int X; cin >> X;
+        int left = 0, right = n - 1;
         bool found = false;
-        while(left <= right) {
-            int mid = (left+right) /2;
-            if(a[mid] == i) {
+        while (left <= right)
+        {
+            int mid = (left + right) / 2;
+            if (a[mid] == X)
+            {
                 found = true;
-            } else if(a[mid] < i) {
+                break; // Cực kì quan trọng.
+            }
+            else if (a[mid] > X)
+            {
                 left = mid + 1;
-            } else {
+            }
+            else
+            {
                 right = mid - 1;
             }
         }
-        if(found) cout << "YES";
-        else cout << "NO";
+        if (found)
+            cout << "YES";
+        else
+            cout << "NO";
 
         cout << endl;
     }
 }
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     solve();
