@@ -29,8 +29,6 @@ void insertionSort(int a[], int n ) {
 void merge(vector<int> &t, int l, int mid, int r) { 
     // Hàm này là trộn 2 mảng đã được sắp xếp tăng dần
     // Nó cũng hoạt động với 2 mảng có 1 phần tử nên dùng đệ quy là ngon
-
-
     vector<int> temp;
     int i = l, j = mid + 1;
     while(i <= mid && j <= r) {
@@ -42,9 +40,6 @@ void merge(vector<int> &t, int l, int mid, int r) {
     // Đưa nốt tất cả các phần tử của mảng còn lại vào temp ( các phần tử này cũng đã được sắp xếp)
     while(i <= mid) temp.push_back(t[i++]);
     while(j <= r) temp.push_back(t[j++]);
-
-
-
     for(int k = l; k <= r; k++) t[k] = temp[k-l];
 }
 void mergeSort(vector<int> &t, int l, int r) {
@@ -54,11 +49,7 @@ void mergeSort(vector<int> &t, int l, int r) {
     mergeSort(t, mid+1, r);
     merge(t, l, mid, r);
 }
-
 void quickSort() {}
-
-
-
 int main() {
     srand(time(NULL));
     cout << "So Phan Tu Cua Mang Ban Muon Test: ";
@@ -80,3 +71,5 @@ int main() {
 
     return 0;
 }
+
+
