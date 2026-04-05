@@ -1,0 +1,1 @@
+{"name":"Local: Bai1","url":"d:\\GITHUB_My_code_journey_tracked\\BinaryTree\\Bai1.cpp","tests":[{"id":1775377022492,"input":"6\n1 2 L 1 3 R 2 4 L 2 5 R 3 6 L 3 7 R","output":"4 2 5 1 6 3 7"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\GITHUB_My_code_journey_tracked\\BinaryTree\\Bai1.cpp","group":"local","local":true}
