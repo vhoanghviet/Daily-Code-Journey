@@ -8,8 +8,7 @@ void swap(int &a, int &b) {
     int temp = a; a = b; b = temp;
 }
 
-void selection_sort(vector<int> &a) {
-    int n = a.size();
+void selection_sort(vector<int> &a, int n) {
     for(int i = 0; i < n - 1; i++) {
         int min_index = i;
         for(int j = i + 1; j < n; j++) {
@@ -25,7 +24,7 @@ void insertion_sort(vector<int> &a) {
     for(int i = 1; i < n ; i++) {
         int key = a[i];
         int j = i - 1;
-        while(j >= 0 && key < a[j]) {
+        while(j >= 0 && a[j] < key) {
             a[j+1] = a[j];
             j--;
         }

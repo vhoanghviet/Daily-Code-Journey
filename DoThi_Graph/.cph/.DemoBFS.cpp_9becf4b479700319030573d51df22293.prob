@@ -1,0 +1,1 @@
+{"name":"Local: DemoBFS","url":"d:\\GITHUB_My_code_journey_tracked\\DoThi_Graph\\DemoBFS.cpp","tests":[{"id":1778298624631,"input":"5 3\n5 4\n4 1\n4 3\n3\n4 5\n4 2\n3 4","output":"1\n-1\n1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\GITHUB_My_code_journey_tracked\\DoThi_Graph\\DemoBFS.cpp","group":"local","local":true}
