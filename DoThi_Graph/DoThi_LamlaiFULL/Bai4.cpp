@@ -2,27 +2,30 @@
 using namespace std;
 
 int n,m;
-vector<int> ke[1001];
+vector<pair<int,int>> dscanh;
 void nhap() {
-    cin >> n >> m;
-    for(int i = 0 ; i < m; i++) {
-        int x, y;
-        cin >> x >> y;
-        ke[x].push_back(y);
-        ke[y].push_back(x);
+    cin >> n; cin.ignore();
+    for(int i = 1 ; i <= n; i++) {
+        string s;
+        getline(cin, s, '\n');
+        stringstream ss(s);
+        int x;
+        while(ss >> x) {
+            dscanh.push_back({i,x});
+        }
     }
 }
+
 int main() {
     nhap();
-    for(int i = 1; i <= n; i++) {
-        sort(ke[i].begin(),ke[i].end());
-    }
-    for(int i = 1; i<= n ; i++) {
-        cout << i << " : ";
-        for(auto it : ke[i]) {
-            cout << it << " ";
+    sort(dscanh.begin(), dscanh.end(), [](pair<int,int> p1 , pair<int,int> p2)->bool{
+        if(p1.first == p2.first) {
+            return p1.second < p2.second;
         }
-        cout << endl;
+        return p1.first < p2.first;
+    });
+    for(auto it : dscanh) {
+        cout << it.first << " " << it.second << endl;
     }
     return 0;
 }
